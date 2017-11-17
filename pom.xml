@@ -7,8 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <project.javaee.version>7.0</project.javaee.version>
         <project.hibernate-java8.version>5.2.10.Final</project.hibernate-java8.version>
         <project.hibernate-entitymanager.version>5.1.1.Final</project.hibernate-entitymanager.version>
         <project.hibernate-validator.version>5.2.3.Final</project.hibernate-validator.version>
@@ -23,14 +21,6 @@
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -58,7 +48,7 @@
             </exclusions>
         </dependency>
 
-<!--         REST EASY -->
+		<!-- REST EASY -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
@@ -80,12 +70,12 @@
             <scope>compile</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jackson-provider</artifactId>
-            <version>3.0.13.Final</version>
-            <scope>compile</scope>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.jboss.resteasy</groupId> -->
+<!--             <artifactId>resteasy-jackson-provider</artifactId> -->
+<!--             <version>3.0.13.Final</version> -->
+<!--             <scope>compile</scope> -->
+<!--         </dependency> -->
 
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
@@ -111,7 +101,7 @@
             <version>3.4</version>
         </dependency>
 
-<!--         Hibernate -->
+		<!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
@@ -144,7 +134,7 @@
             <version>${project.mapstruct.version}</version>
         </dependency>
 
-        <!-- Discovery de beans, usado pelo weld -->
+        <!-- Beans Weld -->
         <dependency>
             <groupId>org.jboss</groupId>
             <artifactId>jandex</artifactId>
@@ -166,7 +156,7 @@
     </dependencies>
 
     <build>
-        <finalName>GestaoAtividades</finalName>
+        <finalName>GestaoAtividadesBackend</finalName>
         <plugins>
 
             <plugin>
@@ -198,8 +188,6 @@
                     </annotationProcessorPaths>
                     <compilerArgs>
                         <compilerArg>
-                            <!-- Habilitando as implementações do MapStruct 
-                                como beans do cdi -->
                             -Amapstruct.defaultComponentModel=jsr330
                         </compilerArg>
                     </compilerArgs>
