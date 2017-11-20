@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 import javax.validation.constraints.NotNull;
 
-import br.com.fogliato.rest.validation.CheckTipoAtividade;
+import br.com.fogliato.core.domain.enums.TipoAtividade;
 
 public class AtividadeDto implements Serializable {
 	
@@ -19,8 +19,8 @@ public class AtividadeDto implements Serializable {
     @NotNull(message = "Por favor, informe a descrição da atividade.")
     private String descricao;
 
-    @CheckTipoAtividade
-    private String tipoAtividade;
+    @NotNull(message = "Por favor, informe o tipo da atividade.")
+    private TipoAtividade tipoAtividade;
 
     private LocalDateTime dataConclusao;
 
@@ -48,11 +48,11 @@ public class AtividadeDto implements Serializable {
         this.descricao = descricao;
     }
 
-    public String getTipoAtividade() {
+    public TipoAtividade getTipoAtividade() {
         return tipoAtividade;
     }
 
-    public void setTipoAtividade(String tipoAtividade) {
+    public void setTipoAtividade(TipoAtividade tipoAtividade) {
         this.tipoAtividade = tipoAtividade;
     }
 

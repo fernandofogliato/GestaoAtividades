@@ -19,6 +19,12 @@ import br.com.fogliato.core.dto.AtividadeDto;
 import br.com.fogliato.core.exception.AtividadeException;
 import br.com.fogliato.core.service.AtividadeService;
 
+/**
+ * Classe responsável por fornecer operações REST para a manipulação de atividades.
+ * 
+ * @author Fernando Fogliato
+ *
+ */
 @Path("/atividade")
 public class AtividadeResource {
 

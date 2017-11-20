@@ -51,7 +51,7 @@ public class Atividade implements Serializable {
 	@Convert(converter = TipoAtividadeConverter.class)
 	private TipoAtividade tipoAtividade;
 	
-	@Column(name = "data_criacao", nullable = false, updatable = false)
+	@Column(name = "data_criacao", updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataCriacao;
 

@@ -12,6 +12,12 @@ import com.google.gson.GsonBuilder;
 import br.com.fogliato.rest.gson.adapter.LocalDateAdapter;
 import br.com.fogliato.rest.gson.adapter.LocalDateTimeAdapter;
 
+/**
+ * Classe utilizado pelo CDI para criação de uma instância do {@link Gson}. 
+ * Responsável também por realizar o registro dos adaptadores utilizados para conversão de datas e horas no formato JSON.
+ * 
+ * @author Fernando Fogliato
+ */
 public class GsonProducer {
 	
     private void registrarAdapters(GsonBuilder gsonBuilder) {
